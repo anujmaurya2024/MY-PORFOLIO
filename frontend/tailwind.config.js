@@ -6,19 +6,67 @@ export default {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        sans: ["'Space Grotesk'", "'Inter'", 'system-ui', '-apple-system', 'sans-serif'],
+        mono: ["'JetBrains Mono'", 'monospace'],
+      },
       colors: {
-        primary: {
-          50: '#f0f9ff',
-          100: '#e0f2fe',
-          200: '#bae6fd',
-          300: '#7dd3fc',
-          400: '#38bdf8',
-          500: '#0ea5e9',
-          600: '#0284c7',
-          700: '#0369a1',
-          800: '#075985',
-          900: '#0c4a6e',
+        neon: {
+          purple: '#EEC5A0',
+          cyan: '#AD6E54',
+          blue: '#EEC5A0',
+          pink: '#AD6E54',
         },
+        primary: {
+          50: '#faf5ff',
+          100: '#f3e8ff',
+          200: '#e9d5ff',
+          300: '#d8b4fe',
+          400: '#c084fc',
+          500: '#a855f7',
+          600: '#9333ea',
+          700: '#7e22ce',
+          800: '#6b21a8',
+          900: '#581c87',
+        },
+        bg: {
+          void: '#17191A',
+          deep: '#273231',
+          card: 'rgba(6, 11, 20, 0.7)',
+        },
+      },
+      animation: {
+        'float-slow': 'float-slow 8s ease-in-out infinite',
+        'float-medium': 'float-medium 6s ease-in-out infinite',
+        'spin-slow': 'spin-slow 20s linear infinite',
+        'glow-pulse': 'glow-pulse 3s ease-in-out infinite',
+        'shimmer': 'shimmer 4s linear infinite',
+      },
+      keyframes: {
+        'float-slow': {
+          '0%, 100%': { transform: 'translateY(0px) rotate(0deg)' },
+          '33%': { transform: 'translateY(-18px) rotate(2deg)' },
+          '66%': { transform: 'translateY(8px) rotate(-1deg)' },
+        },
+        'float-medium': {
+          '0%, 100%': { transform: 'translateY(0px)' },
+          '50%': { transform: 'translateY(-24px)' },
+        },
+        'spin-slow': {
+          from: { transform: 'rotate(0deg)' },
+          to: { transform: 'rotate(360deg)' },
+        },
+        'glow-pulse': {
+          '0%, 100%': { opacity: '0.6' },
+          '50%': { opacity: '1' },
+        },
+        'shimmer': {
+          '0%': { backgroundPosition: '-200% center' },
+          '100%': { backgroundPosition: '200% center' },
+        },
+      },
+      backdropBlur: {
+        xs: '4px',
       },
     },
   },
