@@ -127,7 +127,6 @@ const TiltProjectCard = ({ project, index, onExpand }) => {
       <div
         style={{
           transform: `rotateY(${tilt.x}deg) rotateX(${tilt.y}deg) scale(${hovered ? 1.02 : 1})`,
-          transition: tilt.x === 0 ? 'transform 0.5s ease' : 'transform 0.1s ease',
           transformStyle: 'preserve-3d',
           background: 'rgba(6,11,20,0.7)',
           backdropFilter: 'blur(16px)',
@@ -138,7 +137,7 @@ const TiltProjectCard = ({ project, index, onExpand }) => {
           display: 'flex',
           flexDirection: 'column',
           gap: 16,
-          transition: 'border-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease',
+          transition: `${tilt.x === 0 ? 'transform 0.5s ease' : 'transform 0.1s ease'}, border-color 0.3s ease, box-shadow 0.3s ease`,
           boxShadow: hovered
             ? `0 20px 60px rgba(0,0,0,0.4), 0 0 40px ${project.accent}`
             : '0 4px 20px rgba(0,0,0,0.2)',

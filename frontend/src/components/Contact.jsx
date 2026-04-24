@@ -26,7 +26,6 @@ const FloatingLabelInput = ({ label, type = 'text', value, onChange, required, t
     borderRadius: 12,
     padding: textarea ? '22px 20px 14px' : '22px 20px 10px',
     color: 'rgba(255,255,255,0.85)',
-    fontFamily: "'Space Grotesk', sans-serif",
     fontSize: '0.95rem',
     outline: 'none',
     resize: textarea ? 'vertical' : 'none',
