@@ -1,4 +1,4 @@
-# Thiranex Full-Stack Portfolio
+# Full-Stack Portfolio
 
 This is a full-stack portfolio application built with React, Node.js, Express, and MongoDB.
 
@@ -6,7 +6,7 @@ This is a full-stack portfolio application built with React, Node.js, Express, a
 
 To run the entire project (backend and frontend), simply run the included batch file:
 
-1.  Open the project folder: `thiranex-portfolio`
+1.  Open the project folder: `portfolio`
 2.  Double-click on **`START_PROJECT.bat`**
 
 This script will:
